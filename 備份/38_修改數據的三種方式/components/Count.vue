@@ -1,6 +1,7 @@
 <template>
     <div class="count">
-        <h2>當前求和為:{{countStore.sum}}</h2>
+        <h2>當前求和為:{{countStore.sum}}</h2>\
+        <h3>歡迎來到:{{countStore.school}}，坐落於:{{ countStore.address }}</h3>
         <select v-model.number="n">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -13,33 +14,30 @@
 
 <script setup lang="ts" name="Count">
     import { ref,reactive } from 'vue';
+    // 引入 useCountStore
     import {useCountStore} from "@/store/count"
-
+    //使用 useCountStore ，得到一個專門保存count相關的store
     const countStore = useCountStore()
-
-    // 以下兩種都可以拿到 state 中的數據
-    // console.log("@@@",countStore.sum)
-    // console.log("@@@",countStore.$state.sum)
-
-    /*
-    let obj = reactive({
-        a:1,
-        b:2,
-        c:ref(3)
-    })
-    let x = ref(9)
-    console.log(obj.a)
-    console.log(obj.b)
-    console.log(obj.c)
-    console.log(x.value)
-    */
     
     // 數據
     let n = ref(1) // 用戶選擇的數字
 
     // 方法
     function add(){
-        
+        // 這是第一種修改方式
+        // countStore.sum += 1
+
+        //  第二種方法
+        /*
+        countStore.$patch({
+            sum:888,
+            school:"尚硅谷",
+            address:"北京"
+        })
+        */
+
+        // 第三種方式
+        countStore.increment(n.value)
     }
     function minus(){
         
