@@ -1,10 +1,10 @@
 <template>
 	<div class="father">
-		<h3>父组件</h3>
-		<h4>房产：{{ house }}</h4>
+		<h3>父組件</h3>
+		<h4>房產：{{ house }}</h4>
 		<button @click="changeToy">修改Child1的玩具</button>
-		<button @click="changeComputer">修改Child2的电脑</button>
-		<button @click="getAllChild($refs)">让所有孩子的书变多</button>
+		<button @click="changeComputer">修改Child2的電腦</button>
+		<button @click="getAllChild($refs)">讓所有孩子的書變多</button>
 		<Child1 ref="c1"/>
 		<Child2 ref="c2"/>
 	</div>
@@ -17,7 +17,7 @@
 	let c1 = ref()
 	let c2 = ref()
 
-	// 注意点：当访问obj.c的时候，底层会自动读取value属性，因为c是在obj这个响应式对象中的
+	// 注意點：當訪問 obj.c 的時候，底層會自動讀取 value 屬性，因為 c 是在 obj 這個響應式對象中的
 	/* let obj = reactive({
 		a:1,
 		b:2,
@@ -31,14 +31,14 @@
 	console.log(x) */
 	
 
-	// 数据
+	// 數據
 	let house = ref(4)
 	// 方法
 	function changeToy(){
-		c1.value.toy = '小猪佩奇'
+		c1.value.toy = '小豬佩奇'
 	}
 	function changeComputer(){
-		c2.value.computer = '华为'
+		c2.value.computer = '華碩'
 	}
 	function getAllChild(refs:{[key:string]:any}){
 		console.log(refs)
@@ -46,7 +46,7 @@
 			refs[key].book += 3
 		}
 	}
-	// 向外部提供数据
+	// 向外部提供數據
 	defineExpose({house})
 </script>
 

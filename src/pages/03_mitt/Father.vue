@@ -1,6 +1,6 @@
 <template>
   <div class="father">
-    <h3>父组件</h3>
+    <h3>父組件</h3>
     <Child1/>
     <Child2/>
   </div>

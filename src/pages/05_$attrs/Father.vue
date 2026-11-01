@@ -1,6 +1,6 @@
 <template>
   <div class="father">
-    <h3>父组件</h3>
+    <h3>父組件</h3>
 		<h4>a：{{a}}</h4>
 		<h4>b：{{b}}</h4>
 		<h4>c：{{c}}</h4>

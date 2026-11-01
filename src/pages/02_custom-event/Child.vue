@@ -1,16 +1,16 @@
 <template>
   <div class="child">
-    <h3>子组件</h3>
+    <h3>子組件</h3>
 		<h4>玩具：{{ toy }}</h4>
-		<button @click="emit('send-toy',toy)">测试</button>
+		<button @click="emit('send-toy',toy)">測試</button>
   </div>
 </template>
 
 <script setup lang="ts" name="Child">
 	import { ref } from "vue";
-	// 数据
+	// 數據
 	let toy = ref('奥特曼')
-	// 声明事件
+	// 聲明事件
 	const emit =  defineEmits(['send-toy'])
 </script>
 

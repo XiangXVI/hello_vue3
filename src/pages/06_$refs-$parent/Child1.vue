@@ -1,15 +1,15 @@
 <template>
   <div class="child1">
-    <h3>子组件1</h3>
+    <h3>子組件1</h3>
 		<h4>玩具：{{ toy }}</h4>
-		<h4>书籍：{{ book }} 本</h4>
-		<button @click="minusHouse($parent)">干掉父亲的一套房产</button>
+		<h4>書籍：{{ book }} 本</h4>
+		<button @click="minusHouse($parent)">干掉父親的一套房產</button>
   </div>
 </template>
 
 <script setup lang="ts" name="Child1">
 	import { ref } from "vue";
-	// 数据
+	// 數據
 	let toy = ref('奥特曼')
 	let book = ref(3)
 
@@ -18,7 +18,7 @@
 		parent.house -= 1
 	}
 
-	// 把数据交给外部
+	// 把數據交給外部
 	defineExpose({toy,book})
 
 </script>

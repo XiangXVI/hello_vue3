@@ -1,8 +1,8 @@
 <template>
   <div class="child1">
-    <h3>子组件1</h3>
+    <h3>子組件1</h3>
 		<h4>玩具：{{ toy }}</h4>
-		<button @click="emitter.emit('send-toy',toy)">玩具给弟弟</button>
+		<button @click="emitter.emit('send-toy',toy)">玩具給弟弟</button>
   </div>
 </template>
 
@@ -10,7 +10,7 @@
 	import {ref} from 'vue'
 	import emitter from '@/utils/emitter';
 
-	// 数据
+	// 數據
 	let toy = ref('奥特曼')
 </script>
 

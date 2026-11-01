@@ -3,14 +3,14 @@ import App from './App.vue'
 import {createPinia} from 'pinia'
 import router from './router/index.ts'
 
-// 创建应用
+// 創建應用
 const app = createApp(App)
-// 创建pinia
+// 創建 pinia
 const pinia = createPinia()
 
-// 安装插件
+// 安裝插件
 app.use(pinia)
 // 安装路由器
 app.use(router)
-// 挂载应用
+// 掛載應用
 app.mount('#app')
