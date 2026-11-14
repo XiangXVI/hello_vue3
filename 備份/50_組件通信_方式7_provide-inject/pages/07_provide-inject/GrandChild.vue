@@ -1,9 +1,9 @@
 <template>
   <div class="grand-child">
-    <h3>我是孙组件</h3>
-    <h4>银子：{{ money }}</h4>
-    <h4>车子：一辆{{car.brand}}车，价值{{car.price}}万元</h4>
-    <button @click="updateMoney(6)">花爷爷的钱</button>
+    <h3>我是孫組件</h3>
+    <h4>銀子：{{ money }}</h4>
+    <h4>車子：一輛{{car.brand}}車，價值{{car.price}}萬元</h4>
+    <button @click="updateMoney(6)">花爺爺的錢</button>
   </div>
 </template>
 

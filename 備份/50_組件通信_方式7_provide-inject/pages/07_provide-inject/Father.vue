@@ -1,8 +1,8 @@
 <template>
   <div class="father">
-    <h3>父组件</h3>
-    <h4>银子：{{ money }}万元</h4>
-    <h4>车子：一辆{{car.brand}}车，价值{{car.price}}万元</h4>
+    <h3>父組件</h3>
+    <h4>銀子：{{ money }}萬元</h4>
+    <h4>車子：一輛{{car.brand}}車，價值{{car.price}}萬元</h4>
     <Child/>
   </div>
 </template>
@@ -13,14 +13,14 @@
 
   let money = ref(100)
   let car = reactive({
-    brand:'奔驰',
+    brand:'賓士',
     price:100
   })
   function updateMoney(value:number){
     money.value -= value
   }
 
-  // 向后代提供数据
+  // 向後代提供數據
   provide('moneyContext',{money,updateMoney})
   provide('car',car)
 
